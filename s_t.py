@@ -93,8 +93,6 @@ if result:
         input_language = "zh-cn"
     elif in_lang == "Japonés":
         input_language = "ja"
-    elif in_lang == "Ruso":
-        input_language = "ru"
     
     out_lang = st.selectbox(
         "Selecciona el lenguaje de salida",
