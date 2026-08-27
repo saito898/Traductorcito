@@ -19,9 +19,9 @@ st.title("TRADUCTORCITO.")
 st.subheader("Escucho lo que quieres traducir.")
 
 
-image = Image.open('OIG7.jpg')
+image = Image.open('duolingo.png')
 
-st.image(image,width=300)
+st.image(image,width=1920)
 with st.sidebar:
     st.subheader("Traductor.")
     st.write("Presiona el botón, cuando escuches la señal "
@@ -93,6 +93,8 @@ if result:
         input_language = "zh-cn"
     elif in_lang == "Japonés":
         input_language = "ja"
+    elif in_lang == "Ruso":
+        input_language = "ru"
     
     out_lang = st.selectbox(
         "Selecciona el lenguaje de salida",
@@ -110,6 +112,8 @@ if result:
         output_language = "zh-cn"
     elif out_lang == "Japonés":
         output_language = "ja"
+    elif in_lang == "Ruso":
+        input_language = "ru"
     
     english_accent = st.selectbox(
         "Selecciona el acento",
@@ -122,6 +126,7 @@ if result:
             "Australia",
             "Irlanda",
             "Sudáfrica",
+            "Costeño"
         ),
     )
     
@@ -142,6 +147,7 @@ if result:
         tld = "ie"
     elif english_accent == "Sudáfrica":
         tld = "co.za"
+    
     
     
     def text_to_speech(input_language, output_language, text, tld):
